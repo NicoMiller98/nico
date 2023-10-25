@@ -11,10 +11,11 @@ package dominio;
 public class persona {
 
     private String nombre;
-    private int cedula;
+    private String cedula;
     private String direccion;
 
-    public persona(String nombre, int cedula, String direccion) {
+    //aca es mejor tener todo como String
+    public persona(String nombre, String cedula, String direccion) {
         this.nombre = nombre;
         this.cedula = cedula;
         this.direccion = direccion;
@@ -28,11 +29,11 @@ public class persona {
         this.nombre = nombre;
     }
 
-    public int getCedula() {
+    public String getCedula() {
         return cedula;
     }
 
-    public void setCedula(int cedula) {
+    public void setCedula(String cedula) {
         this.cedula = cedula;
     }
 

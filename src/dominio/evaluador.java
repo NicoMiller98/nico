@@ -10,14 +10,16 @@ package dominio;
  */
 public class evaluador extends persona {
 
-    public evaluador(String nombre, int cedula, String direccion, int añoDeIngreso) {
+    //mejor poner cedula como string
+    public evaluador(String nombre, String cedula, String direccion, int añoDeIngreso) {
         super(nombre, cedula, direccion);  // Llama al constructor de la clase base persona en el contexto de herencia. (super refiere a superclase)
         this.añoDeIngreso = añoDeIngreso;
     }
 
     private int añoDeIngreso;
-
-    public int getAñoDeIngreso() {
+    
+    //no poner ñ!!!!!!!!!!
+    public int getAnioDeIngreso() {
         return añoDeIngreso;
     }
 

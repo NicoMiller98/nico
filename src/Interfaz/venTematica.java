@@ -138,9 +138,11 @@ public class venTematica extends javax.swing.JFrame {
         String descripcion = jTextArea2.getText();
         // Crear un nuevo objeto tematica
         tematica nuevaTematica = new tematica(nombre, descripcion);
+        /* ESTO ESTA DEMAS
         nuevaTematica.setNombre(nombre);
         nuevaTematica.setDescripcion(descripcion);
-
+        */
+        
         // Agregar el objeto tematica a la lista de tematicas en la clase sistema
         Sistema.agregarTematica(nuevaTematica);
 

@@ -4,11 +4,16 @@
  */
 package Interfaz;
 
+import dominio.persona;
+
+
 /**
  *
  * @author Daniel Abudara y Nicolas Miller
  */
 public class venPostulantes extends javax.swing.JFrame {
+    
+   //persona Persona = new persona(nombre, cedula, direccion);
 
     /**
      * Creates new form venPostulantes
@@ -59,6 +64,9 @@ public class venPostulantes extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jScrollPane7 = new javax.swing.JScrollPane();
         jTextArea7 = new javax.swing.JTextArea();
+        rdbtnRemoto = new javax.swing.JRadioButton();
+        rdbtnPresencial = new javax.swing.JRadioButton();
+        rdbtnMixto = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -87,6 +95,11 @@ public class venPostulantes extends javax.swing.JFrame {
         });
 
         jButton3.setText("Siguiente");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -139,6 +152,27 @@ public class venPostulantes extends javax.swing.JFrame {
                 .addGap(173, 173, 173))
         );
 
+        rdbtnRemoto.setText("Remoto");
+        rdbtnRemoto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rdbtnRemotoActionPerformed(evt);
+            }
+        });
+
+        rdbtnPresencial.setText("Presencial");
+        rdbtnPresencial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rdbtnPresencialActionPerformed(evt);
+            }
+        });
+
+        rdbtnMixto.setText("Mixto");
+        rdbtnMixto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rdbtnMixtoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -150,7 +184,15 @@ public class venPostulantes extends javax.swing.JFrame {
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel8)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addGap(50, 50, 50)
+                        .addComponent(rdbtnRemoto)
+                        .addGap(18, 18, 18)
+                        .addComponent(rdbtnPresencial)
+                        .addGap(18, 18, 18)
+                        .addComponent(rdbtnMixto)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -210,9 +252,13 @@ public class venPostulantes extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel7)
                     .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(19, 19, 19)
-                .addComponent(jLabel8)
-                .addGap(23, 23, 23)
+                .addGap(17, 17, 17)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(rdbtnRemoto)
+                    .addComponent(rdbtnPresencial)
+                    .addComponent(rdbtnMixto))
+                .addGap(20, 20, 20)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3)
                     .addComponent(jButton1))
@@ -230,6 +276,50 @@ public class venPostulantes extends javax.swing.JFrame {
         MenuVentanas v = new MenuVentanas();
         v.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+
+        String nombre = jTextArea1.getText();
+        String cedula = jTextArea2.getText();
+        String descripcion = jTextArea3.getText();
+        String telefono = jTextArea4.getText();
+        String mail = jTextArea5.getText();
+        String linkedin = jTextArea6.getText();
+        //el radiobutton se define con un numero, mirar video
+        //String formato = rdbtnRemoto.getText();
+        
+        //String cedula = jTextArea2.getText(); LINK DE LINKEDIN
+        
+        //postulante nuevaPersona = new persona (nombre, cedula, direccion);
+        
+        // Crear un nuevo objeto postulante
+       // postulante nuevoPostulante = new postulante(nombre, cedula, descripcion, telefono, mail, linkedin);
+      //  nuevaTematica.setNombre(nombre);
+     //   nuevaTematica.setDescripcion(descripcion);
+
+        // Agregar el objeto tematica a la lista de tematicas en la clase sistema
+     //   Sistema.agregarTematica(nuevaTematica);
+
+        jTextArea1.setText("");
+        jTextArea2.setText("");
+        jTextArea3.setText("");
+        jTextArea4.setText("");
+        jTextArea5.setText("");
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void rdbtnRemotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbtnRemotoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rdbtnRemotoActionPerformed
+
+    private void rdbtnPresencialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbtnPresencialActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rdbtnPresencialActionPerformed
+
+    private void rdbtnMixtoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbtnMixtoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rdbtnMixtoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -300,5 +390,8 @@ public class venPostulantes extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea5;
     private javax.swing.JTextArea jTextArea6;
     private javax.swing.JTextArea jTextArea7;
+    private javax.swing.JRadioButton rdbtnMixto;
+    private javax.swing.JRadioButton rdbtnPresencial;
+    private javax.swing.JRadioButton rdbtnRemoto;
     // End of variables declaration//GEN-END:variables
 }

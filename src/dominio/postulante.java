@@ -13,13 +13,15 @@ import java.util.Map;
  */
 public class postulante extends persona {
 
-    private int telefono;
+    private String telefono;
     private String mail;
     private String linkedin;
     private String formato;
     private Map<tematica, Integer> temasConocidos;  // Se utiliza un Map para gestionar los niveles de temas
 
-    public postulante(String nombre, int cedula, String direccion, int telefono, String mail, String linkedin, String formato) {
+    
+    //aca capaz esta mejor tener todo como string
+    public postulante(String nombre, String cedula, String direccion, String telefono, String mail, String linkedin, String formato) {
         super(nombre, cedula, direccion);    // Llama al constructor de la clase base persona en el contexto de herencia. (super refiere a superclase)
         this.telefono = telefono;
         this.mail = mail;
@@ -29,11 +31,11 @@ public class postulante extends persona {
 
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 

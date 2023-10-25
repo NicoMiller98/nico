@@ -16,6 +16,7 @@ public class entrevista {
     private String comentarios;
     private int numeroCorrelativo;
 
+    
     public entrevista(evaluador evaluador, postulante postulante, int puntaje, String comentarios, int numeroCorrelativo) {
         this.evaluador = evaluador;
         this.postulante = postulante;
